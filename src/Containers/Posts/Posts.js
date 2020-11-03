@@ -6,6 +6,11 @@ import Searchbar from "./SearchPosts/Searchbar";
 const mapStateToProps = (state) => {
   return { posts: state.posts };
 };
+const StyledDiv = styled.div`
+  display: block;
+  width: 70%;
+  margin: auto;
+`;
 class Posts extends Component {
   state = {
     searchString: "",
@@ -17,11 +22,6 @@ class Posts extends Component {
     this.setState({ searchString: "" });
   };
   render() {
-    const StyledDiv = styled.div`
-      display: block;
-      width: 70%;
-      margin: auto;
-    `;
     let Posts = [...this.props.posts.reverse()];
     if (this.state.searchString !== "") {
       Posts = this.props.posts.filter((post) => {

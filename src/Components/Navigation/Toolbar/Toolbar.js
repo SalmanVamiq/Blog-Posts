@@ -10,6 +10,7 @@ const StyledDiv = styled.div`
   width: 100%;
   top: 0;
 `;
+
 const toolbar = (props) => {
   return (
     <StyledDiv>

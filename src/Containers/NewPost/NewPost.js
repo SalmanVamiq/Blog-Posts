@@ -11,6 +11,11 @@ function mapDispatchToProps(dispatch) {
     addPost: (post) => dispatch(addPost(post)),
   };
 }
+const StyledForm = styled.form`
+  width: 70%;
+  margin: auto;
+  margin-top: 60px;
+`;
 class ConnectedNewPost extends Component {
   state = {
     form: formConfig,
@@ -57,11 +62,6 @@ class ConnectedNewPost extends Component {
     // this.currInput.focus();
   }
   render() {
-    const StyledForm = styled.form`
-      width: 70%;
-      margin: auto;
-      margin-top: 60px;
-    `;
     let formElements = this.state.form.map((el) => (
       <Input {...el} key={el.name} onChange={this.inputChangeHandler} />
     ));

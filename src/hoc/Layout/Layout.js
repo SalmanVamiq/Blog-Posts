@@ -13,8 +13,8 @@ const layout = (props) => {
       <Toolbar />
       <StyledMain>
         <Switch>
-          <Route path="/" exact component={Posts} />
-          <Route path="/newpost" exact component={NewPost} />
+          <Route path="/" exact render={() => <Posts />} />
+          <Route path="/newpost" exact render={() => <NewPost />} />
         </Switch>
       </StyledMain>
     </>
